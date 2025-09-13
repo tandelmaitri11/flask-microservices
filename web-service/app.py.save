@@ -1,0 +1,10 @@
+import requests
+import os
+
+app=Flask(name)
+ANALYTICS_URL=os.environ.get("ANALYTICS_URL","http://analytics:5001/visit")
+@app.route('/')
+
+def home():
+requests.get(ANALYTICS_URL)
+return "Hello from Web Service!"	
